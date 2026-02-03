@@ -1,6 +1,6 @@
 # Carregando pacotes necessários
 install.packages ("pacman")
-pacman::p_load(lavaan, semPlot, BifactorIndicesCalculator, dplyr, readxl)
+pacman::p_load(lavaan, semPlot, BifactorIndicesCalculator, readxl)
 
 # Carregando e organizando o banco
 url <- "https://raw.githubusercontent.com/felipe-bigoto/banco-dass21/main/dados-dass-21.xlsx"
@@ -50,3 +50,4 @@ semPaths(
   mar = c(3,0.8,3,1),
   weighted = FALSE, edge.color = "black"
 )
+
