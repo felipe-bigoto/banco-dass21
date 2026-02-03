@@ -16,12 +16,12 @@ model_bifactor <- '
   PSICOPATOLOGIA  =~ Item_01 + Item_02 + Item_03 + Item_04 + Item_05 + Item_06 + Item_07 + Item_08 + Item_09 + Item_10 +
     Item_11 + Item_12 + Item_13 + Item_14 + Item_15 + Item_16 + Item_17 + Item_18 + Item_19 + Item_20 + Item_21
 
-  DEPRESSÃO =~ Item_03 + Item_05 + Item_10 + Item_13 + Item_16 + Item_17 + Item_21
+  DEPRESSAO =~ Item_03 + Item_05 + Item_10 + Item_13 + Item_16 + Item_17 + Item_21
   ANSIEDADE =~ Item_02 + Item_04 + Item_07 + Item_09 + Item_15 + Item_19 + Item_20
   ESTRESSE =~ Item_01 + Item_06 + Item_08 + Item_11 + Item_12 + Item_14 + Item_18
 
   PSICOPATOLOGIA ~~ 0*DEPRESSÃO; PSICOPATOLOGIA ~~ 0*ANSIEDADE; PSICOPATOLOGIA ~~ 0*ESTRESSE
-  DEPRESSÃO ~~ 0*ANSIEDADE; DEPRESSÃO ~~ 0*ESTRESSE
+  DEPRESSAO ~~ 0*ANSIEDADE; DEPRESSÃO ~~ 0*ESTRESSE
   ANSIEDADE ~~ 0*ESTRESSE
   '
 
@@ -50,4 +50,5 @@ semPaths(
   mar = c(3,0.8,3,1),
   weighted = FALSE, edge.color = "black"
 )
+
 
